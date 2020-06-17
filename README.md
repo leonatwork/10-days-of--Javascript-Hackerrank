@@ -5,3 +5,6 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 2 - Arithematic Operators
 - Day 2 - Functions
 - Day 2 - Let and Const
+- Day 3 - Conditional Statements: If-Else
+- Day 3 - Conditional Statements: Switch
+- Day 3 - Loops
