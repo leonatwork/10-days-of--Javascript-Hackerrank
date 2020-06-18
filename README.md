@@ -8,3 +8,6 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 3 - Conditional Statements: If-Else
 - Day 3 - Conditional Statements: Switch
 - Day 3 - Loops
+- Day 4 - Arrays
+- Day 4 - Try, Catch, and Finally
+- Day 4 - Throw
