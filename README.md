@@ -11,3 +11,6 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 4 - Arrays
 - Day 4 - Try, Catch, and Finally
 - Day 4 - Throw
+- Day 5 - Create a Rectangle Object
+- Day 5 - Count Objects
+- Day 5 - Classes
