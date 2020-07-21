@@ -1,5 +1,7 @@
 # 10-days-of--Javascript-Hackerrank
+
 Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerrank.com/domains/tutorials/10-days-of-javascript).
+
 - Day 1 - Hello, World!
 - Day 1 - Data Types
 - Day 2 - Arithematic Operators
@@ -14,3 +16,5 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 5 - Create a Rectangle Object
 - Day 5 - Count Objects
 - Day 5 - Classes
+- Day 6 - Bitwise Operators
+- Day 6 - JavaScript Dates
