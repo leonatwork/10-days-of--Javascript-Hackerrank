@@ -18,3 +18,6 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 5 - Classes
 - Day 6 - Bitwise Operators
 - Day 6 - JavaScript Dates
+- Day 7 - Regular Expressions I
+- Day 7 - Regular Expressions II
+- Day 7 - Regular Expressions III
