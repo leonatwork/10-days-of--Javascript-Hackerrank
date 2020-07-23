@@ -21,3 +21,5 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 7 - Regular Expressions I
 - Day 7 - Regular Expressions II
 - Day 7 - Regular Expressions III
+- Day 8 - Create a Button
+- Day 8 - Buttons Container
