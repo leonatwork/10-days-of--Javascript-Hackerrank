@@ -24,25 +24,25 @@ process.stdin.on("end", (_) => {
 function readLine() {
   return inputString[currentLine++];
 }
-function getMaxLessThanK(n, k) {
-  let ans = 0;
-  for (let i = 1; i < n; i++) {
-    for (let j = i + 1; j <= n; j++) {
-      let and = i & j;
-      if (and > ans && and < k) {
-        ans = and;
-      }
-    }
-  }
-  return ans;
+
+function regexVar() {
+  /*
+   * Declare a RegExp object variable named 're'
+   * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.',
+   * followed by one or more letters.
+   */
+
+  const re = new RegExp(/(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[a-zA-Z]+$/);
+
+  /*
+   * Do not remove the return statement
+   */
+  return re;
 }
 
 function main() {
-  const q = +readLine();
+  const re = regexVar();
+  const s = readLine();
 
-  for (let i = 0; i < q; i++) {
-    const [n, k] = readLine().split(" ").map(Number);
-
-    console.log(getMaxLessThanK(n, k));
-  }
+  console.log(!!s.match(re));
 }

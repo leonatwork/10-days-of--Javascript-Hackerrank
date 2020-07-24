@@ -1,48 +1,36 @@
-"use strict";
-
-process.stdin.resume();
-process.stdin.setEncoding("utf-8");
-
-let inputString = "";
-let currentLine = 0;
-
-process.stdin.on("data", (inputStdin) => {
-  inputString += inputStdin;
-});
-
-process.stdin.on("end", (_) => {
-  inputString = inputString
-    .trim()
-    .split("\n")
-    .map((string) => {
-      return string.trim();
-    });
-
-  main();
-});
-
-function readLine() {
-  return inputString[currentLine++];
-}
-function getMaxLessThanK(n, k) {
-  let ans = 0;
-  for (let i = 1; i < n; i++) {
-    for (let j = i + 1; j <= n; j++) {
-      let and = i & j;
-      if (and > ans && and < k) {
-        ans = and;
-      }
-    }
+class Rectangle {
+  constructor(w, h) {
+    this.w = w;
+    this.h = h;
   }
-  return ans;
 }
 
-function main() {
-  const q = +readLine();
+/*
+ *  Write code that adds an 'area' method to the Rectangle class' prototype
+ */
+Rectangle.prototype.area = function () {
+  return this.w * this.h;
+};
+/*
+ * Create a Square class that inherits from Rectangle and implement its class constructor
+ */
 
-  for (let i = 0; i < q; i++) {
-    const [n, k] = readLine().split(" ").map(Number);
-
-    console.log(getMaxLessThanK(n, k));
+class Square extends Rectangle {
+  constructor(w) {
+    super(w, w);
   }
+}
+
+if (
+  JSON.stringify(Object.getOwnPropertyNames(Square.prototype)) ===
+  JSON.stringify(["constructor"])
+) {
+  const rec = new Rectangle(3, 4);
+  const sqr = new Square(3);
+
+  console.log(rec.area());
+  console.log(sqr.area());
+} else {
+  console.log(-1);
+  console.log(-1);
 }

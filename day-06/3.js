@@ -24,25 +24,25 @@ process.stdin.on("end", (_) => {
 function readLine() {
   return inputString[currentLine++];
 }
-function getMaxLessThanK(n, k) {
-  let ans = 0;
-  for (let i = 1; i < n; i++) {
-    for (let j = i + 1; j <= n; j++) {
-      let and = i & j;
-      if (and > ans && and < k) {
-        ans = and;
-      }
-    }
-  }
-  return ans;
+
+/*
+ * Modify and return the array so that all even elements are doubled and all odd elements are tripled.
+ *
+ * Parameter(s):
+ * nums: An array of numbers.
+ */
+function modifyArray(nums) {
+  nums = nums.map((num) => {
+    if (num % 2 === 0) num *= 2;
+    else num *= 3;
+    return num;
+  });
+  return nums;
 }
 
 function main() {
-  const q = +readLine();
+  const n = +readLine();
+  const a = readLine().split(" ").map(Number);
 
-  for (let i = 0; i < q; i++) {
-    const [n, k] = readLine().split(" ").map(Number);
-
-    console.log(getMaxLessThanK(n, k));
-  }
+  console.log(modifyArray(a).toString().split(",").join(" "));
 }

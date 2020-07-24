@@ -80,6 +80,9 @@ eql.onclick = function () {
   }
   console.log(ans);
   let finalAns = decToBin(ans);
+  operand1 = finalAns;
+  operand2 = operator = "";
+  isOp1 = true;
   res.innerHTML = finalAns;
 };
 

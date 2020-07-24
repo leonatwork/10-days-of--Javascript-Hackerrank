@@ -25,24 +25,27 @@ function readLine() {
   return inputString[currentLine++];
 }
 
-function regexVar() {
-  /*
-   * Declare a RegExp object variable named 're'
-   * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.',
-   * followed by one or more letters.
-   */
+// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+function getDayName(dateString) {
+  let dayName = new Date(dateString).toString().split(" ")[0];
+  // Write your code here
+  if (dayName === "Sun") dayName = "Sunday";
+  else if (dayName === "Mon") dayName = "Monday";
+  else if (dayName === "Tue") dayName = "Tuesday";
+  else if (dayName === "Wed") dayName = "Wednesday";
+  else if (dayName === "Thu") dayName = "Thursday";
+  else if (dayName === "Fri") dayName = "Friday";
+  else dayName = "Saturday";
 
-  const re = new RegExp(/(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[a-zA-Z]+$/);
-
-  /*
-   * Do not remove the return statement
-   */
-  return re;
+  return dayName;
 }
 
 function main() {
-  const re = regexVar();
-  const s = readLine();
+  const d = +readLine();
 
-  console.log(!!s.match(re));
+  for (let i = 0; i < d; i++) {
+    const date = readLine();
+
+    console.log(getDayName(date));
+  }
 }

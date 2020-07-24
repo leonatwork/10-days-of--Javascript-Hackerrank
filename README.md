@@ -16,11 +16,14 @@ Solution to Hackerrank's 10 days of Javascript [challenge](https://www.hackerran
 - Day 5 - Create a Rectangle Object
 - Day 5 - Count Objects
 - Day 5 - Classes
-- Day 6 - Bitwise Operators
-- Day 6 - JavaScript Dates
-- Day 7 - Regular Expressions I
-- Day 7 - Regular Expressions II
-- Day 7 - Regular Expressions III
-- Day 8 - Create a Button
-- Day 8 - Buttons Container
-- Day 9 - Binary Calculator
+- Day 6 - Inheritence
+- Day 6 - Template Literals
+- Day 6 - Arrow Functions
+- Day 7 - Bitwise Operators
+- Day 7 - JavaScript Dates
+- Day 8 - Regular Expressions I
+- Day 8 - Regular Expressions II
+- Day 8 - Regular Expressions III
+- Day 9 - Create a Button
+- Day 9 - Buttons Container
+- Day 10 - Binary Calculator

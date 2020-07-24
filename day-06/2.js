@@ -25,27 +25,33 @@ function readLine() {
   return inputString[currentLine++];
 }
 
-// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-function getDayName(dateString) {
-  let dayName = new Date(dateString).toString().split(" ")[0];
-  // Write your code here
-  if (dayName === "Sun") dayName = "Sunday";
-  else if (dayName === "Mon") dayName = "Monday";
-  else if (dayName === "Tue") dayName = "Tuesday";
-  else if (dayName === "Wed") dayName = "Wednesday";
-  else if (dayName === "Thu") dayName = "Thursday";
-  else if (dayName === "Fri") dayName = "Friday";
-  else dayName = "Saturday";
-
-  return dayName;
+/*
+ * Determine the original side lengths and return an array:
+ * - The first element is the length of the shorter side
+ * - The second element is the length of the longer side
+ *
+ * Parameter(s):
+ * literals: The tagged template literal's array of strings.
+ * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
+ */
+function sides(literals, ...expressions) {
+  let area = expressions[0];
+  let perimeter = expressions[1];
+  let s1 = (perimeter + (perimeter * perimeter - 16 * area) ** 0.5) / 4;
+  let s2 = (perimeter - (perimeter * perimeter - 16 * area) ** 0.5) / 4;
+  return [s2, s1];
 }
 
 function main() {
-  const d = +readLine();
+  let s1 = +readLine();
+  let s2 = +readLine();
 
-  for (let i = 0; i < d; i++) {
-    const date = readLine();
+  [s1, s2] = [s1, s2].sort();
 
-    console.log(getDayName(date));
-  }
+  const [x, y] = sides`The area is: ${s1 * s2}.\nThe perimeter is: ${
+    2 * (s1 + s2)
+  }.`;
+
+  console.log(s1 === x ? s1 : -1);
+  console.log(s2 === y ? s2 : -1);
 }
